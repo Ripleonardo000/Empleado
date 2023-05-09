@@ -1,0 +1,73 @@
+package empleado;
+
+import java.util.Scanner;
+
+public class EmpleadoMain2 {
+/*Cree una clase llamada Empleado, que incluya tres variables de instancia: un primer nombre (tipo String)un apellido paterno (tipo String) y un salario mensual (double).
+//Su clase debe tener un constructor que inicialice las tres variables de instanciaProporcione un método establecer y un método obtener para cada variable de ins- tancia.
+// Si el salario mensual no es positivo, no establezca su valor. Escriba una aplicación de prueba llamada Prueba- Empleado, que demuestre las capacidades de la clase Empleado.
+// Cree dos objetos Empleado y muestre el salario anual de cada objeto. Después, proporcione a cada Empleado un aumento del 10% y muestre el salario anual de cada Empleado otra
+vez*/
+
+    public static void main(String[] args) {
+
+        Empleadodos e2= new Empleadodos();
+
+        Scanner entrada= new Scanner(System.in);
+
+        System.out.print("··INGRESE SU NOMBRE: ·· ");
+
+        String name;
+
+        name=entrada.next();
+
+        e2.setNombre(name);
+
+
+        System.out.print("··INGRESE SU PRIMER APELLIDO: ·· ");
+
+        String apellido1;
+
+        apellido1= entrada.next();
+
+        e2.setApellidoPaterno(apellido1);
+
+
+        System.out.print("··INGRESE SU SUELDO MENSUAL: ·· ");
+
+        double salarioMen;
+
+        salarioMen=Double.parseDouble(entrada.next());
+
+        e2.setSalarioMensual(salarioMen);
+        System.out.println("··EL SALARIO ANUAL DEL EMPLEADO: "+e2.getNombre()+ e2.getApellidoPaterno()+ "ES DE: ·· " +e2.calcularSalarioAnual());
+
+        e2.aumentoSalario(salarioMen);
+
+        System.out.println("··EL SALARIO ANUAL CON AUMENTO DEL 10% ES DE: ··"+e2.calcularSalarioAnual());
+
+         //PARAMETROS
+        Empleadodos e3;
+        System.out.println("··INGRESE SU NOMBRE: ·· ");
+        name=entrada.next();
+        System.out.println("··INGRESE SU PRIMER APELLIDO: ·· ");
+        apellido1= entrada.next();
+        System.out.print("··INGRESE SU SUELDO MENSUAL: ·· ");
+        salarioMen=Double.parseDouble(entrada.next());
+
+
+
+        e3 = new Empleadodos(name,apellido1,salarioMen);
+        System.out.println("··EL SALARIO ANUAL DEL EMPLEADO: "+e3.getNombre()+ e3.getApellidoPaterno()+ "ES DE: ·· " +e3.calcularSalarioAnual());
+
+        e3.aumentoSalario(salarioMen);
+
+        System.out.println("··EL SALARIO ANUAL CON AUMENTO DEL 10% ES DE: ··"+e3.calcularSalarioAnual());
+
+
+
+
+
+    }
+
+}
