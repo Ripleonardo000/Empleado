@@ -1,0 +1,83 @@
+package empleado;
+
+public class Empleadodos {
+
+    private String name;
+
+    private String apellido1;
+
+    private double sueldoMensual;
+
+    public Empleadodos(String name, String apellido1, double sueldoMensual){
+        this.name=name;
+        this.apellido1=apellido1;
+
+        this.sueldoMensual=sueldoMensual;
+    }
+
+    public Empleadodos() {
+        this.name=name;
+        this.apellido1=apellido1;
+
+        this.sueldoMensual=sueldoMensual;
+    }
+
+//Metodos
+
+
+
+    public void setNombre(String name) {
+
+        this.name = name;
+
+    }
+
+    public void setApellidoPaterno(String apellido1) {
+
+        this.apellido1 = apellido1;
+
+    }
+
+    public void setSalarioMensual(double salarioMensual) {
+
+        this.sueldoMensual = salarioMensual;
+
+    }
+
+    public String getNombre() {
+
+        return name;
+
+    }
+
+    public String getApellidoPaterno() {
+
+        return apellido1;
+
+    }
+
+    public double getSalarioMensual() {
+
+        if(sueldoMensual<0){
+
+            sueldoMensual=0;
+
+        }
+
+        return sueldoMensual;
+
+    }
+
+    public double calcularSalarioAnual(){
+
+        return sueldoMensual*12;
+
+    }
+
+    public void aumentoSalario(double aumentoSalario){
+
+        sueldoMensual+=sueldoMensual*0.1;
+
+    }
+
+}
